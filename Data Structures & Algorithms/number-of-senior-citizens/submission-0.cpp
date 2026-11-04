@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int countSeniors(vector<string>& details) {
+        int count = 0;
+        for(string s : details){
+            int n = s.length();
+            string age = "";
+            age += s[11];
+            age += s[12];
+            int passAge = stoi(age);
+            if(passAge > 60) count++;
+        }
+        return count;
+    }
+};
